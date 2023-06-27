@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 body {
   display: flex;
@@ -127,10 +132,5 @@ body {
 .name-input {
   display: flex;
   width: 100%;
-  border: #000 solid 2px
-    
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  border: #000 solid 2px;
 }
