@@ -13,3 +13,119 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+}
+
+.recipes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.page-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.new-button {
+  background-color: transparent;
+  border-radius: 6px;
+  height: min-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+}
+
+.new-recipe {
+  text-decoration: none;
+  color: #000;
+}
+
+.recipes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.recipe {
+  border: #000 solid 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.recipe-title-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px 0;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.recipe-name {
+  text-decoration: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #000;
+  margin: 0;
+}
+
+.recipe-des {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.form {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-recipe-title {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.field {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  align-content: flex-start;
+}
+
+.name-label {
+  display: none;
+}
+
+.name-input {
+  display: flex;
+  width: 100%;
+  border: #000 solid 2px;
+}
