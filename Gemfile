@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.6'
+ruby '3.2.2'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
 
@@ -16,6 +16,10 @@ gem 'pg', '~> 1.1'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
+
+gem 'cancancan'
+
+gem 'load_and_authorize_resource'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
