@@ -26,6 +26,7 @@ body {
   margin: 0;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .main-container {
@@ -133,4 +134,33 @@ body {
   display: flex;
   width: 100%;
   border: #000 solid 2px;
+}
+
+.public_recipe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22rem;
+  padding: 0 30px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: #000 solid 3px;
+  box-sizing: border-box;
+}
+
+.public-section {
+  width: 80%;
+}
+
+.show-recipe {
+  width: 80%;
+}
+
+.show-recipe-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
 }
