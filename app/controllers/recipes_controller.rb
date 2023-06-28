@@ -30,4 +30,7 @@ class RecipesController < ApplicationController
   def recipe_params
     params.require(:recipe).permit(:name, :description, :prepation_time, :cooking_time, :public)
   end
+  def public_recipes
+    # @recipes = Recipe.where(public: treu).includes(:user, recipe_foods: :food).order(create_at: :desc)
+  end
 end
