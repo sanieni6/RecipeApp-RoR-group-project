@@ -135,3 +135,20 @@ body {
   width: 100%;
   border: #000 solid 2px;
 }
+
+.public_recipe {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22rem;
+  padding: 0 30px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border: #000 solid 3px;
+  box-sizing: border-box;
+}
+
+.public-section {
+  width: 80%;
+}
