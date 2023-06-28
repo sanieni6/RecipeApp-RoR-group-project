@@ -5,10 +5,11 @@
 <div class='show-recipe'>
 <div class='show-recipe-left'>
 <p>Preparation time: <%= @recipe.prepation_time %> hours</p>
-<%= form_for @recipe do |f| %>
+<%= form_for @recipe, url: recipe_path(@recipe), method: :patch, remote: true do |f| %>
   <div> Public
-    <%= f.check_box :public, checked: true%>
+    <%= f.check_box :public%>
   </div>
+  <%= f.submit "Save" %>
 <% end %>
 </div>
 
@@ -16,9 +17,10 @@
 <p>Steps go here...</p>
 <div class='show-recipe-left'>
 <button>Generate shopping list</button>
-<button>Add ingrediant</button>
+<button class="new-button"> <%= link_to "Add ingrediant", new_recipe_recipe_food_path(@recipe), class:"new-recipe" %> </button>
 </div>
 <hr>
+<%= render partial: 'shared/table', locals: {foods: @foods, view: 'recipes'} %>
 </div>
 
 
