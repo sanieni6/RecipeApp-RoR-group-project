@@ -1,0 +1,10 @@
+<li class="recipe">
+<div class="recipe-title-btn">
+<h1 class="recipe-name"> <%= link_to recipe.name, recipe, class:"recipe-name"%> </h1>
+<% if can? :destroy, recipe %>
+<%= button_to "Remove", recipe, method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
+
+<% end %>
+</div>
+<p class="recipe-des"> <%= recipe.description %></p>
+</li>
