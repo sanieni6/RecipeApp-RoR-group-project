@@ -21,6 +21,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -163,4 +164,42 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 10px;
+}
+
+.table-foods {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-foods {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  align-items: flex-start;
+  background-color: #a79595;
+  color: #000;
+}
+
+.even-row {
+  background-color: #d3cfcf;
+}
+
+.odd-row {
+  background-color: #e8e8e8;
+}
+
+.body-elements {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fr-food,
+.row-element {
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.button-cnt {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
 }
