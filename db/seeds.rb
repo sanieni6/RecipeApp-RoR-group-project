@@ -20,3 +20,5 @@ second_recipe_food = RecipeFood.create(quantity: 1, food_id: second_food.id, rec
 third_recipe_food = RecipeFood.create(quantity: 1, food_id: third_food.id, recipe_id: third_recipe.id)
 fourth_recipe_food = RecipeFood.create(quantity: 1, food_id: fourth_food.id, recipe_id: fourth_recipe.id)
 fith_recipe_food = RecipeFood.create(quantity: 1, food_id: first_food.id, recipe_id: second_recipe.id)
+sixth_recipe_food =  RecipeFood.create(quantity:4, food_id: 6, recipe_id: 8)
+seventh_recipe_food =  RecipeFood.create(quantity:4, food_id: 7, recipe_id: 8)
