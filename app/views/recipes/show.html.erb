@@ -1,0 +1,24 @@
+<h2>
+  <%= @recipe.name %>
+</h2>
+
+<div class='show-recipe'>
+<div class='show-recipe-left'>
+<p>Preparation time: <%= @recipe.prepation_time %> hours</p>
+<%= form_for @recipe do |f| %>
+  <div> Public
+    <%= f.check_box :public, checked: true%>
+  </div>
+<% end %>
+</div>
+
+<p>Cooking time: <%= @recipe.cooking_time %> hours</p>
+<p>Steps go here...</p>
+<div class='show-recipe-left'>
+<button>Generate shopping list</button>
+<button>Add ingrediant</button>
+</div>
+<hr>
+</div>
+
+

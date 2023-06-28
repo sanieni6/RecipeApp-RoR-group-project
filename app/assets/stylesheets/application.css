@@ -152,3 +152,15 @@ body {
 .public-section {
   width: 80%;
 }
+
+.show-recipe {
+  width: 80%;
+}
+
+.show-recipe-left {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}

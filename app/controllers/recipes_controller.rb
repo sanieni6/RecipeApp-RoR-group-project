@@ -33,5 +33,9 @@ class RecipesController < ApplicationController
   def public_recipes
     @recipes = Recipe.where(public: true).includes(:user, recipe_foods: :food).order(created_at: :desc)
   end
+
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
   
 end
