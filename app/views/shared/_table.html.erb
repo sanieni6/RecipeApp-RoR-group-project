@@ -1,0 +1,24 @@
+<table class="table-foods">
+        <% if foods.nil?%>
+        <li class="no-recipes">There are no food yet.</li>
+        <% else%>
+        <thead class="header-foods">
+            <tr class="first-row">
+                <th class="fr-food">Food</th>
+                <% if view=='foods'%>
+                    <th class="fr-food">Measurement Unit</th>
+                    <th class="fr-food"> Unit price</th>
+                <% else %>
+                    <th class="fr-food">Quantity</th>
+                    <th class="fr-food">Value</th>
+                <% end %>
+                <th class="fr-food">Actions</th>
+            </tr>
+        </thead>
+        <tbody class="body-foods">
+        <% foods.each_with_index do |food, index| %>
+        <%= render partial: 'shared/food', locals: {food: food, index: index+1, view:view} %>
+        <% end %>
+        <% end %>
+        </tbody>
+    </table>

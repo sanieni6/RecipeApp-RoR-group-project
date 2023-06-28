@@ -1,0 +1,7 @@
+<div class="main-container">
+    <div class="recipes-container">
+        <h1 class="page-title">Foods</h1>
+        <button class="new-button"> <%= link_to "Add Food", new_food_path, class:"new-recipe" %> </button>
+    </div>
+    <%= render partial: 'shared/table', locals: {foods: @foods, view: 'foods'} %>
+</div>
