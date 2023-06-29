@@ -16,7 +16,7 @@
 <p>Cooking time: <%= @recipe.cooking_time %> hours</p>
 <p>Steps go here...</p>
 <div class='show-recipe-left'>
-<button>Generate shopping list</button>
+<button> <%= link_to "General shopping list", shopping_list_path %></button>
 <button class="new-button"> <%= link_to "Add ingrediant", new_recipe_recipe_food_path(@recipe), class:"new-recipe" %> </button>
 </div>
 <hr>
