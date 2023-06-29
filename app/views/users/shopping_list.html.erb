@@ -10,7 +10,7 @@
     <th class="text-info">Quantity</th>
     <th class="text-info">Price</th>
   </tr>
-  <% @recipe_foods.each do |food| %>
+  <% @displayedFoods.each do |food| %>
     <tr>
       <td><%= food.food.name %></td>
       <td><%= food.quantity %><%= food.food.measurement_unit %></td>
