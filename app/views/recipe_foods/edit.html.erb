@@ -1,0 +1,11 @@
+<%= form_for @recipe_food, url: recipe_recipe_food_path(@recipe_food), method: :patch, remote: true, class: 'form' do |f| %>
+    <h1 class="new-recipe-title"> <%= @food.name %></h1>
+    <div class="field">
+    <%= f.label :quantity%>
+    <%= f.number_field :quantity, class:"name-input" %>
+    </div>
+    <div class="field">
+    <%= f.submit 'Edit', class:"new-button" %>
+    </div>
+
+<% end %>

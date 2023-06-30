@@ -5,16 +5,18 @@
     <td class="row-element"> $<%=food.price%> </td>
 <% else %>
     <% recipe_food = food.recipe_foods.find_by(recipe_id: @recipe.id) %>
-    <td class="row-element"> <%=recipe_food.quantity%> </td>
+    <td class="row-element"> <%=recipe_food.quantity%><%= recipe_food.food.measurement_unit%> </td>
     <td class="row-element"> $<%=recipe_food.calculate_value_by_quantity%> </td>
 <% end %>
 <td class="row-element">
 <% if can? :destroy, food %>
 <div class="button-cnt">
     <% if view== 'recipes'%>
-    <button class="new-button"> Modify </button>
+        <button class="new-button"><%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), class:"new-button" %></button>
+        <%= button_to "Delete", recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
+    <% else %>
+        <%= button_to "Delete", food, method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
     <% end %>
-    <%= button_to "Delete", food, method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
 </div>
 <% end %>
 </td>
