@@ -40,10 +40,4 @@ class RecipesController < ApplicationController
     @recipe_foods = @recipe.recipe_foods.includes(:food)
     @foods = @recipe_foods.map(&:food)
   end
-
-  def update
-    @recipe = Recipe.find(params[:id])
-    @recipe.update(params.require(:recipe).permit(:public))
-    redirect_to recipes_path
-  end
 end
