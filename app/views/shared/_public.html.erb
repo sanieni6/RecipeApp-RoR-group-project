@@ -1,7 +1,7 @@
 <% @recipes.each do |recipe| %>
   <div class='public_recipe'>
     <div class='public_left'>
-      <h2><%= link_to recipe.name, recipe_path(recipe.id) %></h2>
+      <h2 class="recipe-name"><%= link_to recipe.name, recipe_path(recipe.id), class:"recipe-name" %></h2>
       <p>By <%= recipe.user.name %></p>
     </div>
     <div>
