@@ -2,7 +2,7 @@
     <h1 class="new-recipe-title"> New Food </h1>
     <div class="field">
         <%= form.label :name, class:"name-label" %>
-        <%= form.text_field :name, placeholder:"name", class:"name-input" %>
+        <%= form.text_field :name, placeholder:"name", class:"name-input", required: true %>
     </div>
     <div class="field">
         <%= form.label :prepation_time, class:"name-label"%>
@@ -10,11 +10,11 @@
     </div>
     <div class="field">
         <%= form.label :cooking_time, class:"name-label"%>
-        <%= form.number_field :price,placeholder:"price", class:"name-input" %>
+        <%= form.number_field :price,placeholder:"price", class:"name-input", required: true, step: '0.01' %>
     </div>
     <div class="field">
         <%= form.label :description, class:"name-label" %>
-        <%= form.number_field :quantity, placeholder: "quantity",class:"name-input" %>
+        <%= form.number_field :quantity, placeholder: "quantity",class:"name-input", required: true, min: 1, step: '0.01' %>
     </div>
     <div class="field">
         <%= form.submit "Add Food", class:"new-button" %>

@@ -5,12 +5,13 @@
 <div class='show-recipe'>
 <div class='show-recipe-left'>
 <p>Preparation time: <%= @recipe.prepation_time %> hours</p>
-<%= form_for @recipe, url: recipe_path(@recipe), method: :patch, remote: true do |f| %>
   <div> Public
-    <%= f.check_box :public%>
+    <% if @recipe.public%>
+      <input type='checkbox' checked>
+    <% elsif !@recipe.public %>
+      <input type='checkbox'>
+    <% end %>
   </div>
-  <%= f.submit "Save" %>
-<% end %>
 </div>
 
 <p>Cooking time: <%= @recipe.cooking_time %> hours</p>
