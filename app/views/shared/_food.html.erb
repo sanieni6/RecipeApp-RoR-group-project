@@ -13,8 +13,13 @@
 <% if can? :destroy, food %>
 <div class="button-cnt">
     <% if view== 'recipes'%>
+        <% if can? :destroy, recipe_food %>
         <button class="new-button"><%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), class:"new-button" %></button>
         <%= button_to "Delete", recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
+        <% else %>
+        <button class="new-button", disabled><%= link_to "Modify", edit_recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), class:"new-button" %></button>
+        <button class="new-button", disabled><%= button_to "Delete", recipe_recipe_food_path(recipe_id:@recipe.id, id: recipe_food.id), method: :delete, data: {confirm: "Are you sure?"}, class:"new-button"%></button>
+        <% end %>
     <% else %>
         <%= button_to "Delete", food, method: :delete, data: {confirm: "Are you sure?"}, class:"new-button" %>
     <% end %>

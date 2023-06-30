@@ -5,6 +5,7 @@
 <div class='show-recipe'>
 <div class='show-recipe-left'>
 <p>Preparation time: <%= @recipe.prepation_time %> hours</p>
+<% if can? :destroy, @recipe %>
   <div> Public
     <% if @recipe.public%>
       <input type='checkbox' checked>
@@ -12,13 +13,26 @@
       <input type='checkbox'>
     <% end %>
   </div>
+  <% else %>
+    <% if @recipe.public%>
+      <div> Public
+        <input type='checkbox' checked disabled>
+      </div>
+    <% elsif !@recipe.public %>
+      <div> Public
+        <input type='checkbox' disabled>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
 <p>Cooking time: <%= @recipe.cooking_time %> hours</p>
 <p>Steps go here...</p>
 <div class='show-recipe-left'>
 <button class="new-button"> <%= link_to "General shopping list", generalshoppinglist_path, class:"new-recipe"  %></button>
+<% if can? :update, @recipe %> 
 <button class="new-button"> <%= link_to "Add ingrediant", new_recipe_recipe_food_path(@recipe), class:"new-recipe" %> </button>
+<% end %>
 </div>
 <hr>
 <%= render partial: 'shared/table', locals: {foods: @foods, view: 'recipes'} %>
