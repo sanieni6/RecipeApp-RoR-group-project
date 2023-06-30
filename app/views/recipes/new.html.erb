@@ -1,0 +1,26 @@
+<%= form_with model: @recipe, url: recipes_path, class: 'form' do |form| %>
+    <h1 class="new-recipe-title"> New Recipe </h1>
+    <div class="field">
+        <%= form.label :name, class:"name-label" %>
+        <%= form.text_field :name, placeholder:"name", class:"name-input", required: true %>
+    </div>
+    <div class="field">
+        <%= form.label :prepation_time, class:"name-label"%>
+        <%= form.number_field :prepation_time,placeholder: "preparation time", class:"name-input", required: true, step: '0.01'%>
+    </div>
+    <div class="field">
+        <%= form.label :cooking_time, class:"name-label"%>
+        <%= form.number_field :cooking_time,placeholder:"cooking time", class:"name-input", required: true, step: '0.01' %>
+    </div>
+    <div class="field">
+        <%= form.label :public%>
+        <%= form.check_box :public, placeholder:"public", class:"name-input" %>
+    </div>
+    <div class="field">
+        <%= form.label :description, class:"name-label" %>
+        <%= form.text_area :description, placeholder: "description",class:"name-input", required: true %>
+    </div>
+    <div class="field">
+        <%= form.submit "Create Recipe", class:"new-button" %>
+    </div>
+    <%end%>

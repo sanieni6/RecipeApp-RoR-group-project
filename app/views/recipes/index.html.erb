@@ -1,0 +1,15 @@
+<div class="main-container">
+    <div class="recipes-container">
+        <h1 class="page-title">Recipes</h1>
+        <button class="new-button"> <%= link_to "New Recipe", new_recipe_path, class:"new-recipe" %> </button>
+    </div>
+    <ul class="recipes">
+        <% if @recipes.nil?%>
+        <li class="no-recipes">There are no recipes yet.</li>
+        <% else%>
+        <% @recipes.each do |recipe| %>
+        <%= render partial: 'shared/recipe', locals: {recipe: recipe} %>
+        <% end %>
+        <% end %>
+    </ul>
+</div>

@@ -1,0 +1,14 @@
+<%= form_with model: @recipe_food, url: recipe_recipe_foods_path, class: 'form' do |form| %>
+    <h1 class="new-recipe-title"> Add Ingredient </h1>
+    <div class="field">
+        <%= form.label :quantity, class:"name-label" %>
+        <%= form.number_field :quantity, placeholder:"quantity", class:"name-input", required: true, min: 1, step: '0.01' %>
+    </div>
+    <div class="field">
+        <%= form.label :food_id, class:"name-label"%>
+        <%= form.select :food_id, options_for_select(@foods.map { |food| [food.name, food.id] }) , class:"name-input" %>
+    </div>
+    <div class="field">
+        <%= form.submit "Add ingredient", class:"new-button" %>
+    </div>
+    <%end%>
