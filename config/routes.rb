@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: "foods#index"
+  devise_scope :user do
+    root 'devise/sessions#new'
+  end
   resources :foods, only: [:index, :show, :new, :create, :destroy]
   resources :recipes, only: [:index, :show, :new, :create, :destroy] do
     resources :recipe_foods, only: [:new, :create, :destroy, :update, :edit]
