@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show, :new, :create, :destroy] do
     resources :recipe_foods, only: [:new, :create, :destroy, :update, :edit]
   end 
+
+  get '/shopping_list/:id', to: 'users#shopping_list', as: 'shopping_list'
   get '/public_recipes', to: 'recipes#public_recipes'
-  get '/general_shopping_list', to: 'recipes#general_shopping_list'
+  get '/generalshoppinglist', to: 'generalshoppinglist#index'
+
 
 
 end
